@@ -6,7 +6,6 @@ class Data {
     const response = await result.json();
     const data = response.hits;
 
-    console.log(data);
     setRelatedList(data);
   }
 }

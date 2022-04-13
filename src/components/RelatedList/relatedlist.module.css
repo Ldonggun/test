@@ -1,0 +1,25 @@
+.container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* width: 360px;
+  height: 12px;
+  border-radius: 12px;
+  font-size: 18px;
+  padding: 16px; */
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  width: 360px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #dfdfdf;
+}

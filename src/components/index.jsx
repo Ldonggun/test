@@ -1,2 +1,3 @@
 import Input from './Input';
-export { Input };
+import RelatedList from './RelatedList';
+export { Input, RelatedList };
