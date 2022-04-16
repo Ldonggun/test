@@ -1,7 +1,10 @@
 .input {
-  width: 360px;
-  height: 12px;
+  width: 400px;
+  height: 40px;
+  border: 1px solid #ccc;
   border-radius: 12px;
   font-size: 18px;
   padding: 16px;
+  outline: none;
+  box-sizing: border-box;
 }

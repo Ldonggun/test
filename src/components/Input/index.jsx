@@ -1,21 +1,19 @@
-import React, { useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './input.module.css';
-import Data from '../../shared/data';
-import debounce from '../../shared/debounce';
-import { RelatedList } from '../index';
+import debounceOnChange from '../../shared/debounce';
 
-const Input = props => {
-  const data = new Data();
+const Input = ({ setRelatedList }) => {
   const [value, setValue] = useState('');
-  const [relatedList, setRelatedList] = useState([]);
 
-  const printValue = useCallback(
-    debounce(value => data.getTitle(value, setRelatedList), 100),
-    [],
-  );
   const handleChange = e => {
+    const value = e.target.value;
     setValue(e.target.value);
-    printValue(e.target.value);
+    if (value.length > 1) debounceOnChange(e.target.value, setRelatedList);
+    if (value === '') {
+      setTimeout(() => {
+        setRelatedList('');
+      }, 500);
+    }
   };
   const handleSubmit = e => {
     e.preventDefault();
@@ -30,9 +28,7 @@ const Input = props => {
           onChange={handleChange}
           className={style.input}
         />
-        {/* <button type='submit'>버튼</button> */}
       </form>
-      <RelatedList list={relatedList} />
     </>
   );
 };
