@@ -1,0 +1,22 @@
+p {
+  margin: 0;
+}
+
+.main {
+  padding: 16px;
+}
+.main > p {
+  color: #a7b4c0;
+}
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.point {
+  font-weight: 600;
+}
