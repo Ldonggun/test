@@ -1,0 +1,10 @@
+.comment {
+  list-style: none;
+  color: rgb(0, 0, 0);
+  margin: 6px 0px;
+  border-bottom: 1px solid black;
+}
+
+.comment {
+  color: #a7b4c0;
+}
