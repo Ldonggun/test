@@ -1,25 +1,28 @@
 .container {
+  position: fixed;
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* width: 360px;
-  height: 12px;
-  border-radius: 12px;
-  font-size: 18px;
-  padding: 16px; */
   margin: 0;
   padding: 0;
 }
 
 .text {
-  width: 360px;
-  font-size: 14px;
+  width: 400px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   background-color: #fff;
   cursor: pointer;
 }
-
-li:hover {
+.text2 {
+  width: 400px;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: #dfdfdf;
+  cursor: pointer;
+}
+.text:hover {
   background-color: #dfdfdf;
 }

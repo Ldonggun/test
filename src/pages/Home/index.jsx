@@ -2,14 +2,25 @@ import React, { useState } from 'react';
 import style from './home.module.css';
 //components
 import { Input, RelatedList } from '../../components/index';
-import Data from '../../shared/data';
+
 const Home = props => {
   const [relatedList, setRelatedList] = useState([]);
-  console.log(relatedList);
+  const [listIndex, setListIndex] = useState();
+  const [index, setIndex] = useState(-1);
+
   return (
     <div className={style.container}>
-      <Input setRelatedList={setRelatedList} />
-      <RelatedList relatedList={relatedList} />
+      <Input
+        setRelatedList={setRelatedList}
+        relatedList={relatedList}
+        setIndex={setIndex}
+        index={index}
+      />
+      <RelatedList
+        relatedList={relatedList}
+        setListIndex={setListIndex}
+        index={index}
+      />
     </div>
   );
 };
